@@ -17,7 +17,8 @@ cd host/ubuntu
 docker build -t licheervnano-build-ubuntu .
 docker run --name licheervnano-build-ubuntu licheervnano-build-ubuntu
 docker export licheervnano-build-ubuntu | sqfstar licheervnano-build-ubuntu.sqfs
-singularity shell -e licheervnano-build-ubuntu.sqfs
+# singularity shell -e licheervnano-build-ubuntu.sqfs
+apptainer shell -e host/ubuntu/licheervnano-build-ubuntu.sqfs
 ```
 
 # build it
